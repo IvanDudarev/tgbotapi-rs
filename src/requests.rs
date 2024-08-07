@@ -469,7 +469,7 @@ pub struct SendMessage {
     pub allow_sending_without_reply: Option<bool>,
     /// The [ReplyMarkup], if desired.
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub reply_markup: Option<ReplyMarkup>,
+    pub reply_markup: Option<InlineKeyboardMarkup>,
 }
 
 impl TelegramRequest for SendMessage {
